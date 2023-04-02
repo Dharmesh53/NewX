@@ -1,38 +1,90 @@
-.App {
-  text-align: center;
+body{
+  font-family: 'Jost';
+  caret-color: transparent;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index:3;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h2{
+  padding-top:4rem ;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.btn-outline-info{
+  font-weight: 500;
+}
+
+.btn-outline-info:hover{
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+h1::first-letter{
+  text-transform: capitalize;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.badge{
+  font-weight: 100;
+  font-size: 0.8rem;
+}
+
+.nxt,.prev{
+  outline: none;
+  border: none;
+  font-size: 1.3rem;
+  padding: 1.5rem;
+  height: 100vh;
+  position: fixed;
+  background-color: transparent; 
+  transition: 0.2s ease-in-out;
+}
+.nxt{
+  right: 0%;
+}
+
+.nxt:hover{
+  background-color: rgb(235, 233, 233); 
+}
+.prev:hover{
+  background-color: rgb(235, 233, 233);
+}
+
+.card{
+  transition: 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.1);
+  box-shadow: 0 3px 30px 5px rgb(0 0 0 / 0.2);
+}
+
+.spinner{
+  top: 40%;
+  left: 43%;
+  position: absolute;
+}
+
+.form-control:focus{
+  caret-color: rgb(0, 0, 0);
+}
+
+@media screen  and (max-width: 426px) {
+  .prev,.nxt{
+  font-size: 1.1rem;
+  padding: 0.4rem;
+  height: auto;
+  z-index: 22;
+  background-color: rgb(0, 0, 0); 
+  bottom: 7%;
+  border-radius: 5px;
+  color: white;
   }
-  to {
-    transform: rotate(360deg);
-  }
+
+.card:hover {
+  transform: scale(0);
+}
+
 }
